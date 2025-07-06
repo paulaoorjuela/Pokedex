@@ -65,7 +65,7 @@ src/
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/pokedex-angular.git
+git clone https://github.com/paulaoorjuela/Pokedex.git
 ```
 
 2. Instala las dependencias:
