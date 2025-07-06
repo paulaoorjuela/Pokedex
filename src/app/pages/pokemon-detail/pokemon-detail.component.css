@@ -1,0 +1,35 @@
+.detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.pokemon-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px #bebebe, 0px 7px 10px #bebebe;
+}
+
+.pokemon-name{
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pokemon-info{
+    width: 90%;
+  }
+  .pokemon-image{
+    width: 200px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,14 @@
+.footer-content {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ff6666;
+}
+
+.footer-credit {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}

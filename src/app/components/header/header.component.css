@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  gap: 10px;
+  background-color: #dc0a2d;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 55px;
+  color: white;
+}
+
+img {
+  width: 50px;
+}

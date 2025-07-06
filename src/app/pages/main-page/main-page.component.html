@@ -1,0 +1,31 @@
+<nav class="navbar poppins-regular">
+  <!-- Search bar to filter Pokémon by name -->
+  <input type="text" placeholder="Buscar por nombre..." (input)="onSearch($event)" class="search-input pressed-shadow" />
+  <!-- Dropdown menu to filter Pokémon by type -->
+  <select id="typeSelect" class="type-select pressed-shadow" (change)="onTypeChange($event)">
+    <option value="">Todos</option>
+    <!-- Looping over all available Pokémon types -->
+    @for(t of types; track t.name){
+    <option [value]="t.name">{{ t.name }}</option>
+    }
+  </select>
+</nav>
+
+<main>
+  <!-- Display all pokemon -->
+  <section class="main poppins-regular pressed-shadow">
+    @for (pokemon of pokemonList; track $index) {
+    <div class="card">
+      <button class="detail-button" (click)="showDetail(pokemon.name)"><i class="fa-solid fa-circle-info"></i></button>
+      <img class="card-image" [src]="pokemon.image" [alt]="pokemon.name">
+      <p>{{pokemon.name}}</p>
+    </div>
+    }
+  </section>
+  <!-- pagination controls -->
+  <div class="pagination poppins-regular">
+    <button (click)="prevPage()" [disabled]="page === 0" class="pagination-button pressed-shadow poppins-regular"><i class="fa-solid fa-chevron-left"></i> Anterior</button>
+    <span>Página {{ page + 1 }}</span>
+    <button (click)="nextPage()" class="pagination-button pressed-shadow poppins-regular">Siguiente <i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+</main>

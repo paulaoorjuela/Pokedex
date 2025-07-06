@@ -1,0 +1,35 @@
+@if(pokemon){
+<main class="detail-card poppins-regular">
+  <img [src]="pokemon.sprites?.other['official-artwork']?.front_default" alt="{{ pokemon.name }}"
+    class="pokemon-image" />
+  <section class="pokemon-info">
+    <h1 class="pokemon-name">{{ pokemon.name }}</h1>
+    <!-- Pokémon height converted to meters -->
+    <p><strong><i class="fa-solid fa-ruler-vertical"></i></strong> {{ pokemon.height / 10 }} m</p>
+    <!-- Pokémon weight converted to kilograms -->
+    <p><strong><i class="fa-solid fa-weight-hanging"></i></strong> {{ pokemon.weight / 10 }} kg</p>
+
+    <p><strong>Tipos:</strong>
+      @for(t of pokemon.types; track $index){
+      <span>
+        {{ t.type.name }}
+        <!-- Add comma except for the last item -->
+        @if($index < pokemon.types.length - 1){ <span>, </span>
+      }
+      </span>
+      }
+    </p>
+
+    <p><strong>Habilidades:</strong>
+      @for(ability of pokemon.abilities; track $index){
+      <span>
+        {{ ability.ability.name }}
+        <!-- Add comma except for the last item -->
+        @if($index < pokemon.abilities.length - 1){ <span>, </span>
+      }
+      </span>
+      }
+    </p>
+  </section>
+</main>
+}

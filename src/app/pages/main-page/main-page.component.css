@@ -1,0 +1,88 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 30px 0;
+  gap: 0.5rem;
+}
+
+.pressed-shadow {
+  box-shadow: inset 2px 4px 6px #b5b5b5, inset 0px 5px 8px #b5b5b5;
+}
+
+.search-input {
+  width: 87%;
+  padding: 15px;
+  border: none;
+  border-radius: 2rem;
+}
+
+.type-select {
+  border: none;
+  border-radius: 2rem;
+  padding: 0 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 17%;
+  background-color: white;
+  margin: 10px;
+  border-radius: 13px;
+  padding: 7px 5px;
+  box-shadow: 0px 0px 10px #bebebe, 0px 7px 10px #bebebe;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 40%;
+  }
+}
+
+.detail-button {
+  background-color: #c0c0c0;
+  color: #3a3a3a;
+  border: none;
+  border-radius: 1rem;
+  padding: 4px 6px 3px;
+  margin-left: auto;
+  margin-right: 2px;
+  cursor: pointer;
+  width: 32px;
+  font-size: 20px;
+}
+
+.card-image {
+  max-width: 100px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.pagination-button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
