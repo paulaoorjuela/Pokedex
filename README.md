@@ -25,7 +25,7 @@ src/
 │   │   ├── main-page/      # Página de inicio (lista y filtro de Pokémon)
 │   │   └── pokemon-detail/ # Página de detalle por Pokémon
 │   ├── components/         # Componentes reutilizables
-│   │   ├── navbar/
+│   │   ├── header/
 │   │   └── footer/
 │   ├── models/             # Interfaces y modelos de datos
 │   │   └── pokemon.model.ts
